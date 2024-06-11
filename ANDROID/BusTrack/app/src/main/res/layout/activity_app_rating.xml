@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/rating"
+    android:gravity="center">
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:saveEnabled="true"
+        android:background="#fff"
+        android:numStars="5"/>
+    <EditText
+        android:id="@+id/etreview"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:paddingLeft="7dp"
+        android:textColor="#fff"
+        android:textColorHint="#5E5555"
+        android:background="@drawable/layout_bg"
+        android:ems="10"
+        android:hint="Review"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/getRating"
+        android:background="@drawable/bg_layout"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Rating "/>
+
+
+
+</LinearLayout>

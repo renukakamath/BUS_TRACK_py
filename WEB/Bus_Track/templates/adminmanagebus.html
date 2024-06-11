@@ -1,0 +1,118 @@
+{% include 'adminheader.html' %}
+
+<div style="height: 800px;background-image: url(/static/assets/img/bus.jpg);padding: 50px;background-repeat: no-repeat;background-position: center;background-size: cover;">
+ <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">  
+
+
+<center>
+	<form method="post" style="height: auto" enctype="multipart/form-data">
+
+
+
+		{% if data['updateBus'] %}
+		<br><br><br><br><br>
+	<h1>Update Manage Bus</h1>
+	
+		<table class="table" style="width: 500px">
+		<tr>
+        <th>Route</th>
+        <td>
+          <select name="r" class="form-control">
+            <option >select</option>
+            {%for row in data['route']%}
+            <option value="{{row['route_id']}}">{{row['route_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr>				<tr>
+				<th>Register Number</th>
+
+				<td><input type="text" name="f" required class="form-control" value="{{data['updateBus'][0]['register_number']}}"></td>
+			</tr>
+			<tr>
+				<th>Seat Capacity</th>
+				<td><input type="text" name="l" required class="form-control" value="{{data['updateBus'][0]['seat_capacity']}}"></td>
+			</tr>
+<tr>
+				<td align="center" colspan="2"><input type="submit" name="update" value="UPDATE" class="btn btn-success"></td>
+			</tr>		</table>
+		{% else %}
+				<br><br><br><br><br>
+
+		<h1> Manage Bus</h1>
+<!-- 		<div style="overflow-y:scroll; height:200px;">
+ -->		<table class="table" style="width: 500px;">
+	<tr>
+        <th>Route</th>
+        <td>
+          <select name="r" class="form-control">
+            <option >select</option>
+            {%for row in data['route']%}
+            <option value="{{row['route_id']}}">{{row['route_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr>			<tr>
+				<th>Register Number</th>
+				<td><input type="text" name="f" required class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Seat Capacity</th>
+				<td><input type="text" name="l" required class="form-control"></td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2"><input type="submit" name="register" value="ADD" class="btn btn-success"></td>
+			</tr>
+		</table>
+		</center>
+
+<!-- 	</div>
+ -->		{% endif %}
+
+   
+
+  
+</center>
+
+<center>
+
+<!--  		
+		<h1 style="">View Bus</h1>
+		<table class="table" style="    width: auto;">
+			<tr>
+				<th>Route</th>
+			<th>Register Number</th>
+
+				<th>Seat Capacity</th>
+
+			</tr>
+			{% for row in data['view']%}
+			<tr>
+				<td>{{row['route_name']}}</td>
+				<td>{{row['register_number']}}</td>
+				<td>{{row['seat_capacity']}}</td>
+				
+				<td>
+				<a class="btn btn-warning" href="?action=update&mid={{row['bus_id']}}">update</a></td>
+				<td><a class="btn btn-danger" href="?action=delete&mid={{row['bus_id']}}">delete</a>
+				</td>
+				<td><a class="btn btn-info" href="adminmanagedriver?bus_id={{row['bus_id']}}">Manage Driver</a>
+				</td>
+			</tr>
+			{% endfor%}
+		</table> -->
+
+</form>
+</center>
+          </div></div></div></section>
+</div>
+
+{% include 'footer.html' %}

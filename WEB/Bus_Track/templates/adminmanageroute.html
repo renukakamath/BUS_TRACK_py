@@ -1,0 +1,125 @@
+{% include 'adminheader.html' %}
+ <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">        
+
+
+<center>
+	<form method="post" style="margin-top: 70px">
+		{% if data['updatenoti'] %}
+	<h2 style="color: black">Update Manage Route</h2>
+	
+		<table class="table" style="width: 500px;color: black">
+<tr>
+        <th>From Place</th>
+        <td>
+          <select name="fp" class="form-control">
+            <option >select</option>
+            {%for row in data['fromplace']%}
+            <option value="{{row['place_id']}}">{{row['place_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr><tr>
+        <th>To Place</th>
+        <td>
+          <select name="tp" class="form-control">
+            <option >select</option>
+            {%for row in data['toplace']%}
+            <option value="{{row['place_id']}}">{{row['place_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr>			<tr>
+				<th>Route</th>
+				<td><input type="text" name="n" required class="form-control" value="{{data['updatenoti'][0]['route_name']}}" ></td>
+			</tr>
+
+       <!--  <tr>
+            <th>Route Details</th>
+            <td><input type="text" name="r" class="form-control" value="{{data['updatenoti'][0]['route_details']}}"></td>
+				<tr> -->
+				<td align="center" colspan="2"><input type="submit" name="update" value="UPDATE" class="btn btn-success"></td>
+			</tr>
+  		</table>
+  	
+		{% else %}
+		<h2 style="color: black"> Manage Route</h2>
+	
+		<table class="table" style="width: 500px;color: black">
+			<tr>
+        <th>From Place</th>
+        <td>
+          <select name="fp" class="form-control">
+            <option >select</option>
+            {%for row in data['fromplace']%}
+            <option value="{{row['place_id']}}">{{row['place_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr><tr>
+        <th>To Place</th>
+        <td>
+          <select name="tp" class="form-control">
+            <option >select</option>
+            {%for row in data['toplace']%}
+            <option value="{{row['place_id']}}">{{row['place_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr><tr>
+        <th>Route</th>
+        <td><input type="text" name="n" pattern="[A-Za-z ]+$" required class="form-control" ></td>
+      </tr>
+       <!--  <tr>
+            <th>Route Details</th>
+            <td><input type="text" name="r" class="form-control" ></td>
+        </tr> -->
+
+ 					<tr>
+				<td align="center" colspan="2"><input type="submit" name="add" value="ADD" class="btn btn-success"></td>
+			</tr>
+ 		</table>
+		{% endif %}
+
+		<!-- <h2 style="color: black">View Route</h2>
+		<table class="table" style="width:700px;color: black">
+			<tr>
+			
+				<th>Route</th>
+				<th>Route Details</th>
+
+				
+			</tr>
+			<tr>
+				{% for row in data['noti']%}
+				
+			
+        <td>{{row['route_name']}}</td>
+        <td>{{row['route_details']}}</td>
+				<td>
+				<a class="btn btn-warning" href="?action=update&nid={{row['route_id']}}">update</a>
+				<a class="btn btn-danger" href="?action=delete&nid={{row['route_id']}}">delete</a>
+				</td>
+			</tr>
+			{% endfor%}
+		</table> -->
+
+</form>
+</center>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  
+
+
+{% include 'footer.html' %}

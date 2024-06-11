@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/hm"
+    tools:context=".Userhome">
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="40dp"-->
+<!--        android:textColor="#120202"-->
+<!--        android:text="WELCOME" />-->
+
+    <!--#####################################################-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_layout"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/needs"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/bus"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/bus" />
+
+                <TextView
+                    android:id="@+id/tvs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_layout"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/rules"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_school_24"
+                    app:srcCompat="@drawable/ic_baseline_school_24" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Student Details" />
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <!--    ################################################-->
+
+
+    <!--#####################################################-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_layout"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bcases"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_baseline_qr_code_scanner_24"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_qr_code_scanner_24" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Scan QR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_layout"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btattendance"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_bookmark_add_24"
+                    app:srcCompat="@drawable/ic_baseline_bookmark_add_24" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Attendance" />
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <!--    ################################################-->
+
+
+    <!--#####################################################-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_layout"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/app_rating"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_baseline_star_rate_24"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_star_rate_24" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Rating" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_layout"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btnoti"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_notifications_24"
+                    app:srcCompat="@drawable/ic_baseline_notifications_24" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Notification" />
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <!--    ################################################-->
+
+
+
+    <!--#####################################################-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_layout"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btlate"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_baseline_note_add_24"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_note_add_24" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Late Request" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_layout"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_exit_to_app_24"
+                    app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Logout" />
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <!--    ################################################-->
+
+
+
+
+    <!--    <Button-->
+<!--        android:id="@+id/needs"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/rules"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="STUDENT DETAILS" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/bcases"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Scan QR" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btattendance"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Attendance" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/app_rating"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Rating" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnoti"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:text="Notification" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btlate"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Late Requrst" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/logout"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="LOGOUT" />-->
+
+
+</LinearLayout>

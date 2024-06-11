@@ -1,0 +1,43 @@
+{% include 'adminheader.html' %}
+
+ <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">  
+
+
+<center>
+	<form method="post" style="height: auto" enctype="multipart/form-data">
+
+
+
+
+		<br><br><br><br>
+		<h1 style="">Feedback</h1>
+		<table class="table" style="    width: auto;">
+			<tr>
+				
+				<th>Student Name</th>
+
+				<th>Feedback</th>
+			</tr>
+			{% for row in data['view']%}
+			<tr>
+			
+				<td>{{row['fname']}} {{row['lname']}}</td>
+				<td>{{row['feedback']}}</td>
+				
+			</tr>
+			{% endfor%}
+		</table>
+
+</form>
+</center>
+          </div></div></div></section>
+
+
+{% include 'footer.html' %}

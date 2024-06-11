@@ -1,0 +1,126 @@
+{% include 'adminheader.html' %}
+
+
+ <section id="about" class="about" >
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">        
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3MPnSnyWwNmpnVEFkaddVvy_GWtxSejs&sensor=false"></script>
+        <script type="text/javascript">
+            // window.onload = function () {
+            function myFunction() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(9.9763482, 76.286272),
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var infoWindow = new google.maps.InfoWindow();
+                var latlngbounds = new google.maps.LatLngBounds();
+                var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+                google.maps.event.addListener(map, 'click', function (e) {
+                    alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());
+                    document.getElementById('slati').value = e.latLng.lat();
+                    document.getElementById('elongi').value = e.latLng.lng();
+
+
+                });
+            }
+        </script>
+
+		
+<center>
+	<form method="post" style="margin-top: 70px">
+		{% if data['updatenoti'] %}
+	<h2 style="color: black">Update Manage Place</h2>
+	
+		<table class="table" style="width: 500px;color: black">
+			<tr>
+				<th>Place</th>
+				<td><input type="text" name="n" required class="form-control" value="{{data['updatenoti'][0]['place_name']}}" ></td>
+			</tr>
+			<tr>
+				<th>Latitude</th>
+			 <td><input type="text" name="lati" class="form-control" id="slati" readonly id="" value="{{data['updatenoti'][0]['latitude']}}"> 
+                <a style="color: magenta" class="btn btn-success" onclick="myFunction();">View Map</a></td>
+        </tr>
+        <tr>
+            <th>Longitude</th>
+            <td><input type="text" name="longi" class="form-control" id="elongi" readonly id="" value="{{data['updatenoti'][0]['longitude']}}"></td>
+				<tr>
+				<td align="center" colspan="2"><input type="submit" name="update" value="UPDATE" class="btn btn-success"></td>
+			</tr>
+  		</table>
+  		<table>
+  			<td>
+        <div id="dvMap" style="width: 600px; height: 400px"></div>
+    </td>
+  		</table>
+		{% else %}
+		<h2 style="color: black"> Manage Place</h2>
+	
+		<table class="table" style="width: 500px;color: black">
+			<tr>
+				<th>Place</th>
+				<td><input type="text" name="n" pattern="[A-Za-z ]+$" required class="form-control" ></td>
+			</tr>
+			<tr>
+				<th>Latitude</th>
+			 <td><input type="text" name="lati" class="form-control" id="slati" readonly id=""> 
+                <a style="color: magenta" class="btn btn-success" onclick="myFunction();">View Map</a></td>
+        </tr>
+        <tr>
+            <th>Longitude</th>
+            <td><input type="text" name="longi" class="form-control" id="elongi" readonly id=""></td>
+        </tr>
+
+ 					<tr>
+				<td align="center" colspan="2"><input type="submit" name="add" value="ADD" class="btn btn-success"></td>
+			</tr>
+ 		</table>
+<table>
+  			<td>
+        <div id="dvMap" style="width: 600px; height: 400px"></div>
+    </td>
+  		</table>		{% endif %}
+
+		<h2 style="color: black">View Place</h2>
+		<table class="table" style="width:700px;color: black">
+			<tr>
+			
+				<th>Place</th>
+				<th>Location</th>
+
+				
+			</tr>
+			<tr>
+				{% for row in data['noti']%}
+				
+			
+				<td>{{row['place_name']}}</td>
+ <td><a class="btn btn-primary" href="http://www.google.com/maps?q={{ row['latitude'] }},{{ row['longitude'] }}">Click Me</a></td>
+				<td>
+				<a class="btn btn-warning" href="?action=update&nid={{row['place_id']}}">update</a>
+				<a class="btn btn-danger" href="?action=delete&nid={{row['place_id']}}">delete</a>
+				</td>
+			</tr>
+			{% endfor%}
+		</table>
+
+</form>
+</center>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  
+
+
+{% include 'footer.html' %}

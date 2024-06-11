@@ -1,0 +1,83 @@
+{% include 'adminheader.html' %}
+
+ <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">  
+
+
+<center>
+	<form method="post" style="height: auto" enctype="multipart/form-data">
+
+		<br><br><br><br><br>
+		<h1> Assign Bus To Students</h1>
+<!-- 		<div style="overflow-y:scroll; height:200px;">
+ -->		<table class="table" style="width: 500px;">
+		<tr>
+        <th> Student</th>
+        <td>
+          <select name="pp" class="form-control">
+            <option >select</option>
+            {%for row in data['stud']%}
+            <option value="{{row['student_id']}}">{{row['fname']}} {{row['lname']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr><tr>
+        <th>Bus</th>
+        <td>
+          <select name="r" class="form-control">
+            <option >select</option>
+            {%for row in data['bus']%}
+            <option value="{{row['bus_id']}}">{{row['register_number']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr>			
+			<tr>
+				<td align="center" colspan="2"><input type="submit" name="register" value="ADD" class="btn btn-success"></td>
+			</tr>
+		</table>
+		</center>
+
+  
+
+
+<center>
+
+ 		
+		<h1 style="">View Assigned Bus Details</h1>
+		
+		<table class="table" style="    width: auto;">
+			<tr>
+			
+				<th>Student Name</th>
+
+			
+				<th>Bus(Reg.No)</th>
+
+
+			</tr>
+			{% for row in data['student']%}
+			<tr>
+				
+				<td>{{row['fname']}}{{row['lname']}}</td>
+				
+				<td>{{row['register_number']}}</td>
+				<td>
+				<a class="btn btn-warning" href="adminbusfee?student_id={{row['student_id']}}&bus_id={{row['bus_id']}}">Add Bus Fee</a></td>
+				
+			</tr>
+			{% endfor%}
+		</table>
+
+</form>
+</center>
+          </div></div></div></section>
+
+
+{% include 'footer.html' %}

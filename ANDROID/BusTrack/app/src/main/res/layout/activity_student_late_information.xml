@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/late"
+    android:orientation="vertical" >
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Late Information"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textSize="25dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:textAppearance="?android:attr/textAppearanceMedium" />-->
+
+    <EditText
+        android:id="@+id/complaint"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:paddingLeft="7dp"
+        android:background="@drawable/layout_bg"
+        android:textColor="#fff"
+        android:textColorHint="#5E5555"
+        android:ems="10"
+        android:hint="Details"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_layout"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="SEND" />
+
+    <ListView
+        android:id="@+id/cview"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

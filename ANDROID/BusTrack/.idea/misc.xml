@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_app_rating.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_driver_notification.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_driver_send_reply.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_driver_view_attendance.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_driver_view_late_request.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_driverviewstudentdetails.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_ipsettings.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_main.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_parent_view_attendance.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_student_late_information.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_student_profile.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_student_qr_details.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_student_registration.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_student_view_driver_details.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_student_view_notification.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_studenthome.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_studentviewamount.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_studentviewbus.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_studentviewseats.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_userhome.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_usermakepayment.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/activity_view_my_qr.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/renuk/OneDrive/Desktop/BUS TRACK/ANDROID/BusTrack/app/src/main/res/layout/scanqr.xml" value="0.1308876811594203" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,147 @@
+{% include 'adminheader.html' %}
+
+ <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">  
+
+
+<center>
+	<br>	<br>	<br>	<br>	
+	<form method="post" style="height: auto" enctype="multipart/form-data">
+<table>	
+	<tr><td>search:<input type="text" name="sname" class="form-control">
+
+	</td>
+	<td><input type="submit" name="search" value="search" class="btn btn-success"></td>
+</tr>
+</table>
+
+ 		
+
+		{% if data['updatestudent'] %}
+		<br><br><br><br><br>
+	<h1>Update Manage Student</h1>
+	
+		<table class="table" style="width: 500px">
+<tr>
+        <th> Place</th>
+        <td>
+          <select name="pp" class="form-control">
+            <option >select</option>
+            {%for row in data['place']%}
+            <option value="{{row['place_id']}}">{{row['place_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr><tr>
+        <th>Route</th>
+        <td>
+          <select name="r" class="form-control">
+            <option >select</option>
+            {%for row in data['route']%}
+            <option value="{{row['route_id']}}">{{row['route_name']}}</option>
+            {%endfor%}
+          </select>
+        </td>
+      </tr>				<tr>
+				<th>First Name</th>
+				<td><input type="text" name="f" required class="form-control" value="{{data['updatestudent'][0]['fname']}}"></td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td><input type="text" name="l" required class="form-control" value="{{data['updatestudent'][0]['lname']}}"></td>
+			</tr>
+			<tr>
+				<th>Batch</th>
+				<td><input type="text" name="pl" required class="form-control" value="{{data['updatestudent'][0]['batch']}}"></td>
+			</tr>
+			<tr>
+				<th>Phone</th>
+				<td><input type="text" name="ph" pattern="[0-9]{10}"  class="form-control" value="{{data['updatestudent'][0]['phone']}}"></td>
+			</tr><!-- 
+				<tr>
+				<th>Dob</th>
+				<td><input type="date" name="e" value="{{data['updatestudent'][0]['dob']}}" required class="form-control"></td>
+			</tr><tr>
+				<th>Gender</th>
+				<td><input type="radio" name="g" checked="" required value="male">male<input type="radio" name="g" required value="female" >female</td>
+			</tr> -->		
+			<tr>
+				<th>Course</th>
+				<td><input type="text" name="cc_id" required class="form-control" value="{{data['updatestudent'][0]['course']}}"></td>
+				</td>
+			</tr><!-- 	
+			<tr>
+				<th>Photo</th>
+				<td><input type="file" name="i" required="" class="form-control" value="{{data['updatestudent'][0]['photo']}}"></td>
+			</tr> -->			
+				<tr>
+				<td align="center" colspan="2"><input type="submit" name="update" value="UPDATE" class="btn btn-success"></td>
+			</tr>
+		</table>
+		{% endif %}
+		<h1 style="">View Student</h1>
+		<table class="table" style="width:auto;margin-left: -31em;">
+			<tr>
+				<th>Slno</th>
+				<!-- <th>Register No.</th> -->
+				<th>Full Name</th>
+
+				<th>Place</th>
+				<th>Batch</th>
+
+				<th>Course</th>
+
+
+			</tr>
+			{%if data['search']%}
+			{% for row in data['search']%}
+			<tr>
+				<td>{{loop.index}}</td>
+				<!-- <td>{{row['username']}}</td> -->
+				
+				<td>{{row['fname']}} {{row['lname']}} </td>
+				<td>{{row['place_name']}}</td>
+				<td>{{row['batch']}}</td>
+				<td>{{row['course']}}</td>
+
+			
+				<!-- <td>
+				<a class="btn btn-warning" href="?action=update&mid={{row['student_id']}}&lid={{row['login_id']}}">update</a></td>
+				<td><a class="btn btn-danger" href="?action=delete&lid={{row['login_id']}}&mid={{row['student_id']}}">delete</a>
+				</td> -->
+			</tr>
+			{% endfor%}
+			{% else%}
+			{% for row in data['student']%}
+			<tr>
+				<td>{{loop.index}}</td>
+				<!-- <td>{{row['username']}}</td> -->
+				
+				<td>{{row['fname']}} {{row['lname']}} </td>
+				<td>{{row['place_name']}}</td>
+				<td>{{row['batch']}}</td>
+				<td>{{row['course']}}</td>
+
+				<!-- <td>
+				<a class="btn btn-warning" href="?action=update&mid={{row['student_id']}}&lid={{row['login_id']}}">update</a></td>
+				<td><a class="btn btn-danger" href="?action=delete&lid={{row['login_id']}}&mid={{row['student_id']}}">delete</a>
+				</td> -->
+			</tr>	
+						{% endfor%}
+
+					{% endif%}
+
+		</table>
+
+</form>
+</center>
+          </div></div></div></section>
+
+
+{% include 'footer.html' %}
